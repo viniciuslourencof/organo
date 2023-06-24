@@ -20,16 +20,12 @@ const Formulario = (props) => {
             imagem,
             time
         })        
-    }
 
-    const itens = [
-        'Frontend',
-        'Backend',
-        'Mobile',
-        'Design'
-    ]
-
-
+        setNome('');
+        setCargo('');
+        setimagem('');
+        setTime('');
+    }    
 
     return (
         <section className='formulario'>
@@ -59,7 +55,7 @@ const Formulario = (props) => {
                 </CampoTexto>
                 <ListaSuspensa 
                     label='Time' 
-                    itens={itens}
+                    itens={props.times}
                     obrigatorio={true}
                     valor={time}    
                     aoAlterado={valor => setTime(valor)}>                                        
